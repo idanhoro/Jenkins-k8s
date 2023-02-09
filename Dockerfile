@@ -1,4 +1,4 @@
 FROM python:3.9
-COPY main.py /src/
+COPY mission2/ /mission2/
 WORKDIR /src/
 CMD ["python", "src/main.py"]
