@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build --privileged -t myapp .'
+                sh 'docker build -t myapp .'
             }
         }
     }
