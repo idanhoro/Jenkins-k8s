@@ -16,5 +16,13 @@ pipeline {
                 }
             }
         }
+        stage('Deploy to EKS') {
+            steps {
+            withAWS(credentials: 'c5c12a95-f7c1-4e0a-99e5-f930528187c3', region: 'us-east-1') {
+                    sh 'kubectl apply -f deployment.yml'
+                    sh 'kubectl apply -f service.yml'
+                }
+            }
+        }
     }
 }
