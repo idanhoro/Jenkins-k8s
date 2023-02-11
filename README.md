@@ -11,17 +11,14 @@ The goal of this project is to build a Python-based application and deploy it to
 - A k8s cluster with access to an image repository (ECR, Nexus, or Artifactory)
 
 ## Steps to set up the project
-1. Install kubectl and eksctl on the build server.
+1. In Jenkins, install kubectl and eksctl on the build server.
 You can find more information on how to install kubectl and eksctl on the following links:
 - [Installing kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 - [Installing eksctl](https://eksctl.io/introduction/installation/)
-2. Clone the repository from GitHub using the following command:
 
-` git clone https://github.com/idanhoro/Jenkins-k8s.git `
-
-3. In Jenkins, create a new pipeline job and configure it to use the Jenkinsfile in the cloned repository.
-4. Add the credentials for your image repository and k8s cluster in the Jenkins credentials store.
-5. Trigger the pipeline to build the Docker image of the application and deploy it to your k8s cluster.
+2. In Jenkins, create a new pipeline job and configure it to use the Jenkinsfile in the cloned repository.
+3. Add the credentials for your image repository and k8s cluster in the Jenkins credentials store.
+4. Trigger the pipeline to build the Docker image of the application and deploy it to your k8s cluster.
 
 <img src="./images/end_of_pipeline.png" width="700"/> 
 <img src="./images/working_web.png" width="700"/> 
