@@ -1,6 +1,6 @@
 ## Jenkins on k8s Project
 
-The goal of this project is to build a Python-based application and deploy it to a k8s cluster using Jenkins. The application image is stored in a repository such as Amazon Elastic Container Registry (ECR), Nexus, or JFrog Artifactory.
+The goal of this project is to build a Python-based application and deploy it to a k8s cluster using Jenkins. The application image is stored in a repository such as Amazon Elastic Container Registry (ECR).
 
 ## Prerequisites
 - Jenkins installed on the build server with the following plugins:
@@ -8,7 +8,7 @@ The goal of this project is to build a Python-based application and deploy it to
   - Kubernetes plugin
   - Git plugin
 - kubectl and eksctl installed on the build server
-- A k8s cluster with access to an image repository (ECR, Nexus, or Artifactory)
+- A k8s cluster with access to an image repository ECR
 
 ## Steps to set up the project
 1. In Jenkins, install kubectl and eksctl on the build server.
