@@ -43,8 +43,8 @@ pipeline {
                         output=$(kubectl get service myflaskapp-service -o jsonpath="{.status.loadBalancer.ingress[0].hostname}" | tr -d '[:space:]')
                         echo "Service URL: http://${output}"
                         '''
-                    }   
-                 }
+                    }
+            }
         }
     }
 }
