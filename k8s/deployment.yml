@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myflaskapp-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myflaskapp
+  template:
+    metadata:
+      labels:
+        app: myflaskapp
+    spec:
+      containers:
+      - name: myflaskapp
+        image: 141752139587.dkr.ecr.us-east-1.amazonaws.com/ecridanho:latest
+        ports:
+        - containerPort: 443
+        env:
+        - name: FLASK_APP
+          value: app
