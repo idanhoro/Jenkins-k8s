@@ -9,6 +9,7 @@
 .idea/**/dictionaries
 .idea/**/shelf
 
+src/cert/
 # AWS User-specific
 .idea/**/aws.xml
 
