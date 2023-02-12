@@ -7,6 +7,10 @@ spec:
     app: myflaskapp
   ports:
   - name: https
-    port: 80
+    port: 443
     targetPort: 5001
   type: LoadBalancer
+  metadata:
+  name: myflaskapp-service
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:us-east-1:141752139587:certificate/7ce81078-4bf5-40a4-8b49-68b62082cef1

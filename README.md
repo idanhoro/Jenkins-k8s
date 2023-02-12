@@ -31,11 +31,12 @@ This project demonstrates how to build and deploy a Dockerized Python applicatio
 
 # SSL-TLS
 
-It works at local machine but for at provider like AWS , CA is needed.
+It works on local machine but for a provider like AWS, known Certificate authority is needed to authorize your certifcate.
+
 Create with ACM  - 
 [Guide to use AWS Certificate Manager ACM](https://k21academy.com/amazon-web-services/aws-certificate-manager-acm/)
 
-Create localy -
+### Create localy -
  1. Need to generate certificate.
 You can generate certificate using the following OpenSSL commands:
 
@@ -48,4 +49,17 @@ You can generate certificate using the following OpenSSL commands:
 2. Change the `run` command at `main.py` -
 
 ``` app.run(host='0.0.0.0', port=5001, ssl_context=('cert/cert.pem', 'cert/key.pem')) ```
+
+
+### Create at AWS:
+1. To generate a certificate locally, follow the steps at the localy creation section.
+2. Go to AWS ACM service and import your own certifcate.
+
+fill the fileds `Certificate body` and `Certificate private key` with the `.pem` created before.
+<img src="./images/create_certifcate.png" width="700"/> 
+
+
+3. On the created certificate dashboard, you will find the ARN URL that needs to be added to the service.yml
+4. Run the pipeline with all the necessary steps or apply the service.yml.
+
 
