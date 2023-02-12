@@ -4,10 +4,10 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip3 install --no-cache-dir -r app/requirements.txt
+RUN pip3 install --no-cache-dir -r src/requirements.txt
 
 ENV FLASK_APP=app
 
 EXPOSE 5001
 
-CMD ["python", "app/app.py"]
+CMD ["python", "src/app.py"]
