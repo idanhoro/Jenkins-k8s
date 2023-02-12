@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Push to ECR') {
             steps {
-                withAWS(credentials: 'c5c12a95-f7c1-4e0a-99e5-f930528187c3', region: 'us-east-1') {
+                withAWS(credentials: 'cf171af7-c23f-4afe-be45-bba9e45a6c11', region: 'us-east-1') {
                     sh '''
                     aws configure set region us-east-1
                     aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 141752139587.dkr.ecr.us-east-1.amazonaws.com
